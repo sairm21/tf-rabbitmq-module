@@ -12,7 +12,7 @@ resource "aws_security_group" "rabbitmq_sg" {
   }
 
   ingress {
-    description      = "Allow ssh traffic for ${var.bastion_host}"
+    description      = "Allow ssh traffic for bastion_host"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
