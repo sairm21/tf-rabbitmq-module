@@ -11,6 +11,14 @@ resource "aws_security_group" "rabbitmq_sg" {
     cidr_blocks      = var.sg_subnet_cidr
   }
 
+  ingress {
+    description      = "Allow ssh traffic for ${var.bastion_host}"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = var.bastion_host
+  }
+
   egress {
     from_port        = 0
     to_port          = 0
