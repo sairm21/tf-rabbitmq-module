@@ -32,7 +32,7 @@ resource "aws_security_group" "rabbitmq_sg" {
     var.tags)
 }
 
-/*
+
 resource "aws_instance" "rabbitmq-instance" {
   instance_type = var.instance_type
   ami = data.aws_ami.ami.id
@@ -50,4 +50,4 @@ resource "aws_instance" "rabbitmq-instance" {
     Name = "${var.env}-${var.component}"
   },
     var.tags)
-}*/
+}
