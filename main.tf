@@ -29,6 +29,7 @@ resource "aws_instance" "rabbitmq-instance" {
   ami = data.aws_ami.ami.id
   vpc_security_group_ids = [aws_security_group.rabbitmq_sg.id]
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
+  subnet_id = var.subnet_id
 
   tags = merge({
     Name = "${var.env}-${var.component}"
