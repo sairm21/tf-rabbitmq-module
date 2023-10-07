@@ -7,7 +7,7 @@ resource "aws_security_group" "rabbitmq_sg" {
     description      = "Allow inbound traffic for ${var.component}-${var.env}"
     from_port        = 5672
     to_port          = 5672
-    protocol         = "-tcp"
+    protocol         = "tcp"
     cidr_blocks      = var.sg_subnet_cidr
   }
 
