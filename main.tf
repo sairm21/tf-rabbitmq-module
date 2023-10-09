@@ -42,7 +42,7 @@ resource "aws_instance" "rabbitmq-instance" {
 
   user_data     = templatefile("${path.module}/userdata.sh", {
     env = var.env
-    component = "RabbitMQ"
+    component = var.component
 
   })
 
