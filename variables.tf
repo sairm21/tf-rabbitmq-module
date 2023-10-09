@@ -6,3 +6,4 @@ variable "tags" {}
 variable "vpc_id" {}
 variable "subnet_id" {}
 variable "bastion_host" {}
+variable "zone_id" {}
