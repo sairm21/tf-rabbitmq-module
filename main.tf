@@ -40,6 +40,11 @@ resource "aws_instance" "rabbitmq-instance" {
   iam_instance_profile = aws_iam_instance_profile.instance_profile.name
   subnet_id = var.subnet_id
 
+  root_block_device {
+    encrypted = true
+    kms_key_id = var.kms_key_id
+  }
+
   user_data     = templatefile("${path.module}/userdata.sh", {
     env = var.env
     component = var.component

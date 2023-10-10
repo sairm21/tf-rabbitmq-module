@@ -7,3 +7,4 @@ variable "vpc_id" {}
 variable "subnet_id" {}
 variable "bastion_host" {}
 variable "zone_id" {}
+variable "kms_key_id" {}
